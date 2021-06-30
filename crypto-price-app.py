@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import time
+import numpy as np
 #---------------------------------#
 # New feature (make sure to upgrade your streamlit library)
 # pip install --upgrade streamlit
