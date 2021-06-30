@@ -103,13 +103,13 @@ selected_coin = col1.multiselect('Cryptocurrency', sorted_coin, sorted_coin)
 df_selected_coin = df[ (df['coin_symbol'].isin(selected_coin)) ] # Filtering data
 
 ## Sidebar - Number of coins to display
-num_coin = col1.slider('Display Top N Coins', 1, 10, 10)
+num_coin = col1.slider('Display Top N Coins', 1, 100, 100)
 df_coins = df_selected_coin[:num_coin]
 
 ## Sidebar - Percent change timeframe
 percent_timeframe = col1.selectbox('Percent change time frame',
-                                    ['7d','24h', '1h','1m'])
-percent_dict = {"7d":'percent_change_7d',"24h":'percent_change_24h',"1h":'percent_change_1h',"1m":'percent_change_1m'}
+                                    ['7d','24h', '1h'])
+percent_dict = {"7d":'percent_change_7d',"24h":'percent_change_24h',"1h":'percent_change_1h'}
 selected_percent_timeframe = percent_dict[percent_timeframe]
 
 ## Sidebar - Sorting values
